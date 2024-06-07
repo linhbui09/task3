@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="second.css"/>
+    <title>Login Page</title> 
+    <script>
+        function loginUser() {
+            var eml = document.getElementById("email").value;
+            var pwd = document.getElementById("password").value;
+            if (eml !== "" && pwd !== "") {
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: eml, password: pwd })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Logged in successfully!\nEmail: " + eml + "\nPassword: " + pwd);
+                        window.location.replace('profile/profile-after.html');
+                    } else {
+                        throw new Error('Login failed');
+                    }
+                })
+                .catch(error => {
+                    alert("Error logging in: " + error.message);
+                });
+            } else {
+                alert("Please enter both email and password.");
+            }
+        }
+
+        function createAccount() {
+            window.location.replace('signup/signup.html'); 
+        }
+    </script>
+</head>
+<body>    
+    <br><br><br>
+    <p style="text-align:center;color:grey;font-size:50px;font-family:arial narrow;font-weight:bold;">
+        Welcome to KAREERLADDER 
+    </p>
+    <form id="loginForm" action="" method="post">  
+        <br><br>
+        <input type="email" id="email" placeholder="  Email" size="35"/><br><br>
+        <input type="password" id="password" placeholder="  Password" size="35"/><br><br>
+        <button type="button" onclick="loginUser()"> Log in </button><br>
+        <div class="line"></div> <br>
+        <button type="button" onclick="createAccount()">Create New Account</button>
+    </form>
+    <div class="f-container">
+        <img src="logo2.png" alt="Kareerladder"/>
+        <br>
+        <br>
+        <p style="color:green"> Make dreams come real</p>
+        <br>
+        <h2 style="font-family:arial narrow"><a href="https://docs.google.com/document/d/1rixjq_zS7qtmg3fZyTAhgRa-XDOoiuOtHFzytOQuano/edit?pli=1#heading=h.7cfmmjqkqax3"> About us</a></h2>
+    </div>
+</body>
+</html>

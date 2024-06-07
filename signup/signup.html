@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="second.css"/>
+        <title>Sign Up Page</title> 
+        <script type="text/javascript">
+            function signupUser() {
+                var eml = document.getElementById("email").value;
+                var pwd = document.getElementById("password").value;
+                if (eml != "" && pwd != "") {
+                    alert("Your account has been successfully created!\nEmail: " + eml + "\nPassword: " + pwd);
+                    window.location.replace('../profile/profile-after.html');
+                } else {
+                    alert("Please enter both email and password.");
+                }        
+            }
+        </script>
+    </head>
+    <body>    
+        <br><br><br>
+        <p style="text-align:center;color: green;font-size:50px;font-family: Tahoma;font-weight:bold;">
+            Creating New Account
+        </p>
+        <form  id="signupForm" action="" method="post">  
+            <br><br>
+            <input type="email" id="email" placeholder="  Email address" size="35"/><br><br>
+            <input type="password" id="password" placeholder="  Password" size="35"/><br><br>
+            <button type="button" onclick="signupUser()"> Sign up </button><br>
+            <div class="line"></div> <br>
+        </form>
+        <div class="f-container">
+            <img src="logo2.png" alt="Kareerladder"/>
+            <br>
+            <br>
+            <p style="color:green"> Make dreams come real</p>
+            <br>
+            <h2 style="font-family:arial narrow"><a href="https://docs.google.com/document/d/1rixjq_zS7qtmg3fZyTAhgRa-XDOoiuOtHFzytOQuano/edit?pli=1#heading=h.7cfmmjqkqax3"> About us</a></h2>
+        </div>
+    </body>
+</html>

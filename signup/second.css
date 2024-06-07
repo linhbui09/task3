@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+body{
+    width: 100%;
+    background-color: rgb(215, 239, 250);
+}
+form{
+    background-color: rgba(148, 86, 5, 0.411);
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    padding: 5px 5px 25px 25px;
+    margin: 15vh 850px;
+    /* border-radius: 5px 5px 6px -7px; */
+}
+input{
+    display: block; 
+    background-color: antiquewhite;
+    margin: auto;
+    border: 10px;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: left;
+    color: black;
+    font-family: "times new roman, arial narrow";
+    font-size: 15px;
+}
+button{
+    border: none ;
+    background-color: blue;
+    color: aliceblue;
+    margin: auto;
+    width: 200px;
+    height: 35px;
+    display: block;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.f-pws{
+    display: block;
+    width: 400px;
+    margin: auto;
+    color: blue;
+    padding-left: 80px;
+    font-family: "arial narrow";
+    font-weight: bold;
+    font-size: 18px;
+    /* text-align: center; */
+}
+.line{
+    border-top: 1px solid #222;
+    opacity: 0.2;
+}
+.f-container{
+    width: 600px;
+    margin-left: 200px;
+    margin-top: 30vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.f-container img{
+    width: 400px;
+    height: 150px;
+}
+.f-container p{
+    font-size: 30px;
+    font-weight: 600;
+    word-spacing: 2px;
+}
